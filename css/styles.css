@@ -3,12 +3,13 @@
 }
 
 body{
-	background-color: black;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
 }
 
 .container{
 	background-color: #3b1261;
-	background: #3b1261 url("images/glitterBg.jpeg") repeat ;
+	background: #3b1261 url("images/glitterBg.jpg") repeat ;
 	height: 100vh;
 	padding-top: 0;
 }
@@ -24,15 +25,15 @@ body{
 }
 
 .dark{
-	background-color: #333;
+	background-color: #d3d3d3;
 }
 
 .light{
-	background-color: #BABED8;
+	background-color: ghostwhite;
 }
 
 .medium{
-	background-color: #D92646;
+	background-color: #42B39F;
 }
 
 .red{
@@ -93,7 +94,7 @@ transform: rotateY(360deg);
 
 #asl>h2{
 	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 	margin-left: 10%;
 }
 
@@ -239,6 +240,72 @@ width: 100%;
 
 #social{
 	display: flex;
+}
+
+#quotes h1{
+	font-size: 18px;
+	padding: 25px;
+	line-height: 1.5;
+	color:#660000;
+}
+
+
+#quotes h1 > span{
+	margin-left: 10px;
+	margin-right: 10px;
+	color:#D92646;
+}
+
+#aboutContainer{
+	display: flex;
+	overflow: hidden;
+}
+
+#aboutContainer #aboutText{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity:0;
+	color: white;
+	transition: 2s opacity 0.5s linear;
+	padding:20px;
+	font-size: 15px;
+	line-height: 1.5;
+}
+#aboutContainer .blackGlassButton{
+	position: relative;
+	height: 120px;
+	width: 120px;
+	margin:auto;
+	background-color: #42B39F;
+	background-image: linear-gradient(#42B39F 70%,white);
+	font-size: 20px;
+	color: #000;
+	line-height: 120px;
+	text-align: center;
+	transform-origin:center center;
+	transform: rotate(0deg);
+    left:0;
+    transition: 2s;
+}
+
+@keyframes rotateAway {
+    from {
+    transform: rotate(0deg);
+    left:0;
+  }
+  to {
+    
+  }
+}
+
+#aboutContainer:hover .blackGlassButton{
+	transform: rotate(360deg);
+    left: 70%;
+}
+
+#aboutContainer:hover #aboutText{
+	opacity: 1;
 }
 
 

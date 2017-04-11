@@ -2,6 +2,8 @@
 var age=23;
 
 function init(){
+
+
 	var x=0;
 	var parent=$('#hobbies');
 	var currentWord=1;
