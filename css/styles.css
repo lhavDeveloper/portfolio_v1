@@ -1,0 +1,139 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+}
+
+.container{
+	background-color: #3b1261;
+	background: #3b1261 url("images/glitterBg.jpeg") repeat ;
+	height: 100vh;
+	padding-top: 0;
+}
+
+.container > .row{
+	height: calc(100% / 3);
+}
+
+.container > .row > .col-xs-6{
+	height: 100%;
+	padding: 5px;
+}
+
+.dark{
+	background-color: #333;
+}
+
+.light{
+	background-color: #BABED8;
+}
+
+.medium{
+	background-color: #D92646;
+}
+
+.red{
+	color: #D92646;
+}
+
+
+#asl{
+	transition: 1s;
+	height: 100%;
+	width: 100%;
+}
+.flippable:hover > div{
+transform: rotateY(360deg);
+}
+
+#asl>h1{
+	font-family: 'Courgette', cursive;
+    margin-left: 10%;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+#asl>h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	margin-left: 10%;
+}
+
+#asl > h2 > ul{
+	position: relative;
+	display: inline;
+	list-style: none;
+	text-align: left;
+	padding-left: 5px;
+}
+
+#asl > h2 > ul > li{
+	position: absolute;
+	transition: opacity 1s ;
+}
+
+.invisible
+{
+	display: inline;
+	top: -100%;
+	opacity: 0;
+}
+
+.visible{
+	display: inline;
+	top: 0;
+	opacity: 1;
+}
+
+
+#projects{
+height: 100%;
+transition: 2s;
+ color: #333;
+ position: relative;
+}
+
+#projects:hover{
+background-color: black;
+}
+
+#projects:hover > i{
+color: ghostwhite;
+margin-left: 5%;
+
+}
+
+ @-webkit-keyframes scalex{
+        from {-webkit-transform: translateY(10px);}
+        65% {-webkit-transform: translateY(0px);}
+        to {-webkit-transform: translateY(10px);;}    
+    }
+
+#projects:hover > h1{
+opacity: 1;
+animation: scalex 3s linear infinite;
+}
+
+#projects> i{  
+	font-size: 100px;
+	line-height: calc(100vh / 3);
+	margin-left: calc(100% / 2 - 50px);
+	transition: 2s;
+	
+}
+
+#projects > h1{
+	opacity: 0;
+	position: absolute;
+	color: white;
+	top: 30%;
+	left: 35%;
+	z-index: 999;
+	transition: 1s opacity 0.5s;
+}
+
+
