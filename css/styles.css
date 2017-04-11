@@ -17,9 +17,10 @@ body{
 	height: calc(100% / 3);
 }
 
-.container > .row > .col-xs-6{
+.container > .row > .col-xs-12{
 	height: 100%;
 	padding: 5px;
+	perspective: 1000px;
 }
 
 .dark{
@@ -38,9 +39,42 @@ body{
 	color: #D92646;
 }
 
+.blackGlassButton{
+
+	display:inline;
+	margin:auto;
+	position:relative;
+	border-radius:50%;
+	height:75px;
+	width:75px;
+	background-color: black; /*for compatibility with older browsers*/
+	background-image: linear-gradient(black 60%,gray);
+}
+
+.blackGlassButton:focus{
+	outline:none;
+}
+
+.blackGlassButton  i{
+	font-size:35px;
+	color:white;
+	padding-top: 5px;
+}
+
+.blackGlassButton:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:15%;
+	width: 70%;
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0));
+	border-radius:50%;
+	
+}
 
 #asl{
-	transition: 1s;
+	transition: 0.5s;
 	height: 100%;
 	width: 100%;
 }
@@ -134,6 +168,77 @@ animation: scalex 3s linear infinite;
 	left: 35%;
 	z-index: 999;
 	transition: 1s opacity 0.5s;
+}
+
+#contact{
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+#contact  i{
+	position: relative;
+    font-size: 80px;
+	top: 35%;
+	margin-left: 20%;
+	margin-right: 20px;
+
+}
+
+#contact  #label{
+	position: relative;
+	font-size: 40px;
+	top: 25%;
+}
+
+.flipContainer:hover #contact{
+transform: rotateY(180deg);
+}
+
+ .front,  .back{
+height: 100%;
+width: 100%;
+}
+
+#contact {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+#contact #contactLinks{
+	color: #000;
+	font-weight: bold;
+	list-style: none;
+	margin-top: 5%;
+}
+
+#contact #contactLinks > li{
+	margin-bottom: 5%;
+}
+#contact #contactLinks > li >i{
+	font-size: 25px;
+	margin-left: 0;
+	
+}
+
+#social{
+	display: flex;
 }
 
 
