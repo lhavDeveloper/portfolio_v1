@@ -3,12 +3,12 @@
 }
 
 body{
-	background-color: white;
+	background-color:  white;
 	font-family: 'Roboto', sans-serif;
 }
 
 .container{
-	background-color: #3b1261;
+	background-color: #01B6AD;
 	background: #3b1261 url("images/glitterBg.jpg") repeat ;
 	height: 100vh;
 	padding-top: 0;
@@ -25,19 +25,27 @@ body{
 }
 
 .dark{
-	background-color: #d3d3d3;
+	background-color: #0A4958 ;
 }
 
 .light{
-	background-color: ghostwhite;
+	background-color: #F6E7D2;
 }
 
 .medium{
-	background-color: #42B39F;
+	background-color: #01B6AD;
 }
 
 .red{
-	color: #D92646;
+	color: #0A4958;
+}
+
+.orange{
+color: #01B6AD;
+}
+
+.pink{
+	color: #F6E7D2;
 }
 
 .blackGlassButton{
@@ -87,20 +95,25 @@ transform: rotateY(180deg);
 
 #asl h1{
 	font-family: 'Courgette', cursive;
-    margin-left: 10%;
     font-weight: 600;
     font-size: 35px;
     margin-top: 0;
     padding-top: 20px;
+    text-align: center;
+    padding-top: 10%
 }
 
 #asl h2{
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
-	margin-left: 10%;
+	text-align: center;
 }
 
-#asl  h2 > ul{
+    #asl #tap
+    {
+    	display: none;
+    }
+#hobbies{
 	position: relative;
 	display: inline;
 	list-style: none;
@@ -108,18 +121,35 @@ transform: rotateY(180deg);
 	padding-left: 5px;
 }
 
-#asl  h2 > ul > li{
+#hobbies> li{
 	position: absolute;
 	transition: opacity 1s ;
 }
 
+
+#asl .front{
+	outline: 1px dotted #01B6AD;
+	outline-offset: -10px;
+}
 #asl > .back > h1{
 	font-size: 25px;
+	text-align: left;
+	margin-left: 10%;
+	padding-top:0;
+	margin-top: 30px;
 }
 
+
+#asl > .back > ul{
+	padding:0;
+	margin-left: 10%;
+	text-transform: uppercase;
+
+}
 #asl > .back > ul > li{
 	display: inline-block;
 	width: 40%;
+	text-decoration: underline;
 }
 
 .invisible
@@ -131,7 +161,7 @@ transform: rotateY(180deg);
 
 .visible{
 	display: inline;
-	top: 0;
+	top: -3px;
 	opacity: 1;
 }
 
@@ -141,6 +171,8 @@ height: 100%;
 transition: 2s;
  color: #333;
  position: relative;
+ outline: 1px dotted #01B6AD;
+	outline-offset: -10px;
 }
 
 #projects:hover{
@@ -186,6 +218,8 @@ animation: scalex 3s linear infinite;
 	height: 100%;
 	width: 100%;
 	color: white;
+	outline: 1px dotted #01B6AD;
+	outline-offset: -10px;
 }
 
 #contact  i{
@@ -224,9 +258,6 @@ width: 100%;
 	top: 0;
 	left: 0;
 }
-.front {
-	
-}
 
 /* back, initially hidden pane */
 .back {
@@ -250,26 +281,36 @@ width: 100%;
 }
 
 #social{
+	height: 100%;
+	width: 100%;
 	display: flex;
 }
 
+#quotes{
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
 #quotes h1{
 	font-size: 18px;
 	padding: 25px;
 	line-height: 1.5;
-	color:#660000;
+	margin: auto;
 }
 
 
 #quotes h1 > span{
 	margin-left: 10px;
 	margin-right: 10px;
-	color:#D92646;
 }
 
 #aboutContainer{
 	display: flex;
 	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	outline: 1px dotted #01B6AD;
+	outline-offset: -10px;
 }
 
 #aboutContainer #aboutText{
@@ -302,6 +343,10 @@ width: 100%;
     transition: 2s;
 }
 
+#aboutContainer .blackGlassButton > span{
+display: none;
+}
+
 @keyframes rotateAway {
     from {
     transform: rotate(0deg);
@@ -321,26 +366,72 @@ width: 100%;
 	opacity: 1;
 }
 
-@media (max-width: 767px){
+@media (min-width: 768px){
+#projects{
+height: 100%;
+transition: 2s;
+ color: #333;
+ position: relative;
+ outline: 1px dotted #01B6AD;
+	outline-offset: -10px;
+}
+
+}
+
+@media (max-width: 991px){
+.container{
+	width: 100%;
+}
 
 	#asl h1{
 		font-size: 30px;
+		padding-top: 8%;
 	}
 
 	#asl h2{
 		font-size: 15px;
 	}
 
+    #asl #tap{
+    	width: 100%;
+    text-align: center;
+    display: block;
+    }
 	#aboutContainer #aboutText{
 		margin:5px;
 
 	}
 
 	#quotes h1{
-		margin-top: 0;
 		font-size: 15px;
 	}
 	#contact  i{
-		margin-left: 10%
+		margin-left: 15%;
 	}
+
+	
+	#aboutContainer .blackGlassButton{
+		line-height: 1;
+		padding-top: 40px;
+	}
+	#aboutContainer .blackGlassButton > span{
+		display: block;
+		font-size: 15px;
+		padding-top: 5px;
+	}
+	#projects{
+background-color: black;
+}
+
+#projects > i{
+color: ghostwhite;
+margin-left: 8%;
+
+}
+
+#projects > h1{
+opacity: 1;
+animation: scalex 3s linear infinite;
+margin-left: 40px;
+}
 }
