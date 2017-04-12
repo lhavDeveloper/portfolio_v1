@@ -14,7 +14,7 @@ body{
 .container{
 	background-color: #01B6AD;
 	background: #3b1261 url("images/glitterBg.jpg") repeat ;
-	height: 100vh;
+    height: 100%;
 	padding-top: 0;
 }
 
@@ -23,6 +23,10 @@ body{
 	padding: 5px;
 	perspective: 1000px;
 
+}
+
+a{
+color: #01B6AD;
 }
 
 .setHeight{
@@ -278,7 +282,7 @@ width: 100%;
 #contact #contactLinks > li{
 	margin-bottom: 5%;
 }
-#contact #contactLinks > li >i{
+#contact #contactLinks > li i{
 	font-size: 25px;
 	margin-left: 0;
 	
@@ -450,6 +454,6 @@ font-size: 25px;
 
 #contact  #label{
 	font-size: 25px;
-	margin-left: 10%;
+	margin-left: 6%;
 }
 }
