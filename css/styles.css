@@ -18,16 +18,16 @@ body{
 	padding-top: 0;
 }
 
-.container > .row{
-	height: calc(100% / 3);
-}
 
-.container > .row > .col-xs-12{
-	height: 100%;
+.container >  .col-xs-12{
 	padding: 5px;
 	perspective: 1000px;
+
 }
 
+.setHeight{
+	min-height: calc(100vh / 3);
+}
 .dark{
 	background-color: #0A4958 ;
 }
@@ -309,7 +309,7 @@ width: 100%;
 }
 
 #aboutContainer{
-	display: flex;
+	position: relative;
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
@@ -318,9 +318,7 @@ width: 100%;
 }
 
 #aboutContainer #aboutText{
-	position: absolute;
-	left: 0;
-	top: 0;
+
 	opacity:0;
 	color: white;
 	transition: 2s opacity 0.5s linear;
@@ -331,7 +329,7 @@ width: 100%;
 	font-size: 14px;
 }
 #aboutContainer .blackGlassButton{
-	position: relative;
+	position: absolute;
 	height: 120px;
 	width: 120px;
 	margin:auto;
@@ -343,7 +341,10 @@ width: 100%;
 	text-align: center;
 	
 	transform: rotate(0deg);
-    left:0;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     transition: 2s;
 }
 
@@ -363,7 +364,7 @@ display: none;
 
 #aboutContainer:hover .blackGlassButton{
 	transform: rotate(360deg);
-    left: 70%;
+    left: 100%;
 }
 
 #aboutContainer:hover #aboutText{
@@ -417,7 +418,7 @@ font-size: 25px;
 		font-size: 15px;
 	}
 	#contact  i{
-		margin-left: 15%;
+		margin-left: 10%;
 	}
 
 	
@@ -449,5 +450,6 @@ font-size: 25px;
 
 #contact  #label{
 	font-size: 25px;
+	margin-left: 10%;
 }
 }
