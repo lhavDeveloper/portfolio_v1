@@ -1,0 +1,83 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #3b1261;
+	background: #3b1261 url("images/glitterBg.jpg") repeat ;
+}
+
+.container{
+	background-color: white;
+	min-height: 100vh;
+}
+
+h1{
+	text-align: center;
+}
+
+
+.col-xs-10{
+	margin:0;
+	padding-left:5%;
+	padding-right:5%;
+	text-align: justify;
+	
+}
+
+.col-xs-10>h2{
+	color:#157476;
+	font-family: 'Courgette',cursive;
+	font-weight: 600 !important;
+	padding-top: 30px;
+
+}
+
+.col-xs-10>h3{
+	text-decoration: underline;
+	color:#157476;
+	margin-top: 0;
+	font-size: 15px;
+}
+
+.col-xs-10>ul::before{
+	content:'My role and resposibilities in the organisation : ';
+}
+
+.col-xs-10>ul>li{
+	padding-bottom: 5px;
+}
+
+.blackGlassButton{
+	display:block;
+	margin:auto;
+	position:relative;
+	border-radius:50%;
+	height:50px;
+	width:50px;
+	background-color: black; /*for compatibility with older browsers*/
+	background-image: linear-gradient(black 60%,gray);
+	margin-top: 30px;
+}
+
+.blackGlassButton:focus{
+	outline:none;
+}
+
+.blackGlassButton  i{
+	font-size:25px;
+	color:white;
+	padding-top: 5px;
+}
+
+.blackGlassButton:after{
+	content: '';
+	position: absolute;
+	top:0;
+	left:15%;
+	width: 70%;
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0));
+	border-radius:50%;
+	
+}

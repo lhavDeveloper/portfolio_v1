@@ -35,8 +35,3 @@ function showText (target, message, index, interval) {
     setTimeout(function () { showText(target, message, index, interval); }, interval);
   }
 }
-
-function redirectPage(){
-	var loc=window.location+'templates/template.html';
-	window.location.replace('https://www.google.com');
-}
