@@ -282,6 +282,8 @@ width: 100%;
 	padding:20px;
 	font-size: 15px;
 	line-height: 1.5;
+	text-align: justify;
+	font-size: 14px;
 }
 #aboutContainer .blackGlassButton{
 	position: relative;
@@ -319,4 +321,26 @@ width: 100%;
 	opacity: 1;
 }
 
+@media (max-width: 767px){
 
+	#asl h1{
+		font-size: 30px;
+	}
+
+	#asl h2{
+		font-size: 15px;
+	}
+
+	#aboutContainer #aboutText{
+		margin:5px;
+
+	}
+
+	#quotes h1{
+		margin-top: 0;
+		font-size: 15px;
+	}
+	#contact  i{
+		margin-left: 10%
+	}
+}
