@@ -37,6 +37,6 @@ function showText (target, message, index, interval) {
 }
 
 function redirectPage(){
-	var loc=window.location+'templates/template.html';
-	window.location.replace('https://www.google.com');
+	var loc=window.location+'templates/myWork.html';
+	window.location.replace(loc);
 }
