@@ -16,17 +16,36 @@
 <body onload="init()">
 <div class="container">
 <div class="row">
-	<div class="col-xs-12 col-sm-6 flippable" >
-		<div id="asl" class="light"><h1>Lhavanya Murali</h1>
+	<div class="flipContainer col-xs-12 col-sm-6 flippable" >
+		<div id="asl">
+		<div class="front light"><h1>Lhavanya Murali</h1>
 		<h2>I live in <span class="red">Manhattan</span></h2>
 		<h2>I am <span id="age" class="red"></span> years old</h2>
-		<h2><span>I like </span>
+		<h2><span>I love working with </span>
 		<ul id="hobbies" class="red">
-		<li class="visible">Programming</li>
-		<li class="invisible">Reading</li>
-		<li class="invisible">Cooking</li>
-		<li class="invisible">Exploring</li>
+		<li class="visible">HTML</li>
+		<li class="invisible">CSS</li>
+		<li class="invisible">Bootstrap</li>
+		<li class="invisible">Javascript</li>
+		<li class="invisible">AngularJS</li>
+		<li class="invisible">JQuery</li>
+		<li class="invisible">Ajax</li>
+		<li class="invisible">Javascript</li>
 		</ul></h2></div>
+		<div class="back medium">
+			<h1>My skillset</h1>
+			<ul>
+				<li>Java</li>
+				<li>Javascript</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Bootstrap</li>
+				<li>AngularJS</li>
+				<li>JQuery</li>
+				<li>REST API</li>
+			</ul>
+		</div>
+	</div>
 	</div>
 	<div id="aboutContainer" class="col-xs-12 col-sm-6 dark">
 	<div class="blackGlassButton" >About Me</div>
@@ -36,7 +55,7 @@ I'd love to find my next project - let's talk!</h3>
 </div>
 <div class="row">
 	<div id="quotes" class="col-xs-12 col-sm-6 medium">
-		<h1><i class="fa fa-quote-left"></i><span>The future is a concept, it doesn’t exist﻿ There is no such thing as tomorrow. There never will be because time is always now. That’s one of the things we discover when we stop talking to ourselves and stop thinking. We find there is only present, only an eternal now.</span><i class="fa fa-quote-right"></i><h1>
+		<h1><i class="fa fa-quote-left"></i><span id="quote"></span><i class="fa fa-quote-right"></i><h1>
 	</div>
 	<div class="col-xs-12 col-sm-6">
 	<div id="projects" class="light">

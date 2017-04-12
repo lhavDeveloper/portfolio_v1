@@ -73,17 +73,18 @@ body{
 	border-radius:50%;
 	
 }
-
+.flipContainer:hover #asl{
+transform: rotateY(180deg);
+}
 #asl{
 	transition: 0.5s;
 	height: 100%;
 	width: 100%;
-}
-.flippable:hover > div{
-transform: rotateY(360deg);
+	transform-style: preserve-3d;
+	position: relative;
 }
 
-#asl>h1{
+#asl h1{
 	font-family: 'Courgette', cursive;
     margin-left: 10%;
     font-weight: 600;
@@ -92,13 +93,13 @@ transform: rotateY(360deg);
     padding-top: 20px;
 }
 
-#asl>h2{
+#asl h2{
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	margin-left: 10%;
 }
 
-#asl > h2 > ul{
+#asl  h2 > ul{
 	position: relative;
 	display: inline;
 	list-style: none;
@@ -106,9 +107,18 @@ transform: rotateY(360deg);
 	padding-left: 5px;
 }
 
-#asl > h2 > ul > li{
+#asl  h2 > ul > li{
 	position: absolute;
 	transition: opacity 1s ;
+}
+
+#asl > .back > h1{
+	font-size: 25px;
+}
+
+#asl > .back > ul > li{
+	display: inline-block;
+	width: 40%;
 }
 
 .invisible
