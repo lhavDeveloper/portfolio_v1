@@ -107,13 +107,17 @@ color: #01B6AD;
 	border-radius:50%;
 	
 }
-.flipContainer:hover #asl{
+.flipContainer:hover .flipDiv{
+	-webkit-transform: rotateY(180deg);
 transform: rotateY(180deg);
-}
-#asl{
+} 
+
+
+.flipDiv{
 	transition: 0.5s;
 	height: 100%;
 	width: 100%;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	position: relative;
 }
@@ -240,52 +244,41 @@ animation: scalex 3s linear infinite;
 }
 
 #contact{
-	height: 100%;
-	width: 100%;
 	color: white;
 	outline: 1px dotted #01B6AD;
 	outline-offset: -10px;
 }
 
-#contact  i{
-	position: relative;
+#contact  > .front >i{
     font-size: 80px;
-	top: 35%;
+	margin-top:15%;
 	margin-left: 20%;
 	margin-right: 20px;
 
 }
 
 #contact  #label{
-	position: relative;
 	font-size: 40px;
 	top: 25%;
 }
 
-.flipContainer:hover #contact{
-transform: rotateY(180deg);
-}
 
  .front,  .back{
 height: 100%;
 width: 100%;
 }
 
-#contact {
-	transition: 0.5s;
-	transform-style: preserve-3d;
-	position: relative;
-}
 
 .front, .back {
-	backface-visibility: hidden;
+	 -webkit-backface-visibility: hidden;
+	 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-/* back, initially hidden pane */
 .back {
+	-webkit-transform:rotateY(180deg);
 	transform: rotateY(180deg);
 }
 
@@ -301,7 +294,7 @@ width: 100%;
 }
 #contact #contactLinks > li i{
 	font-size: 25px;
-	margin-left: 0;
+	margin-right: 20px;
 	
 }
 
@@ -439,7 +432,7 @@ top: 6px;
 	#quotes h1{
 		font-size: 15px;
 	}
-	#contact  i{
+	#contact  > .front i{
 		margin-left: 10%;
 	}
 
