@@ -108,8 +108,7 @@ color: #01B6AD;
 	
 }
 .flipContainer:hover .flipDiv{
-	-webkit-transform: rotateY(180deg);
-transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
 } 
 
 
