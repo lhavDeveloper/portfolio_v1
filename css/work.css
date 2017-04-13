@@ -54,6 +54,7 @@ margin-right: 20px;
 
 
 .blackGlassButton{
+
 	display:block;
 	margin:auto;
 	position:relative;
@@ -62,7 +63,20 @@ margin-right: 20px;
 	width:50px;
 	background-color: black; /*for compatibility with older browsers*/
 	background-image: linear-gradient(black 60%,gray);
+	transform-origin:center center;
+	border-left: solid 2px white;
+	border-top: solid 2px white;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
 	margin-top: 30px;
+}
+
+
+.blackGlassButton:active{
+    border-left: solid 2px gray;
+	border-top: solid 2px gray;
+	border-right: solid 2px white;
+	border-bottom: solid 2px white;
 }
 
 .blackGlassButton:focus{
@@ -70,9 +84,14 @@ margin-right: 20px;
 }
 
 .blackGlassButton  i{
+	position: relative;
 	font-size:25px;
 	color:white;
 	padding-top: 5px;
+	text-align: center;
+	top: 6px;
+	width: 100%;
+	text-align: center;
 }
 
 .blackGlassButton:after{

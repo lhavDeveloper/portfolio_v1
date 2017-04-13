@@ -67,6 +67,18 @@ color: #01B6AD;
 	background-color: black; /*for compatibility with older browsers*/
 	background-image: linear-gradient(black 60%,gray);
 	transform-origin:center center;
+	border-left: solid 2px white;
+	border-top: solid 2px white;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
+}
+
+
+.blackGlassButton:active{
+    border-left: solid 2px gray;
+	border-top: solid 2px gray;
+	border-right: solid 2px white;
+	border-bottom: solid 2px white;
 }
 
 .blackGlassButton:focus{
@@ -74,9 +86,14 @@ color: #01B6AD;
 }
 
 .blackGlassButton  i{
+	position: relative;
 	font-size:35px;
 	color:white;
 	padding-top: 5px;
+	text-align: center;
+	top: 13px;
+	width: 100%;
+	text-align: center;
 }
 
 .blackGlassButton:after{
@@ -397,6 +414,7 @@ transition: 2s;
 }
 .blackGlassButton  i{
 font-size: 25px;
+top: 6px;
 }
 
 	#asl h1{
