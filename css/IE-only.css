@@ -1,0 +1,15 @@
+.flipContainer:hover .flipDiv>.back{
+	display: initial;
+}
+
+.flipContainer:hover .flipDiv>.front{
+	display: none;
+}
+
+.front{
+	display: initial;
+}
+
+.back {
+	display: none;
+}

@@ -109,8 +109,8 @@ color: #01B6AD;
 }
 .flipContainer:hover .flipDiv{
 -webkit-transform: rotateY(180deg);
+transform: rotateY(180deg);
 } 
-
 
 .flipDiv{
 	transition: 0.5s;
@@ -261,14 +261,9 @@ animation: scalex 3s linear infinite;
 	top: 25%;
 }
 
-
  .front,  .back{
 height: 100%;
 width: 100%;
-}
-
-
-.front, .back {
 	 -webkit-backface-visibility: hidden;
 	 	backface-visibility: hidden;
 	position: absolute;
