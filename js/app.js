@@ -38,5 +38,7 @@ function showText (target, message, index, interval) {
 
 function redirectPage(){
 	var loc=window.location+'templates/myWork.html';
+
 	window.location.href=loc;
+
 }
