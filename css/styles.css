@@ -201,6 +201,7 @@ transition: 2s;
  position: relative;
  outline: 1px dotted #01B6AD;
 	outline-offset: -10px;
+	cursor: pointer;
 }
 
 #projects:hover{
