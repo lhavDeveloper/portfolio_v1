@@ -1,11 +1,17 @@
- 
+ .myBar{
+  box-sizing: border-box;
+ }
+
+  .myBar > *{
+  box-sizing: border-box;
+ }
 
  @keyframes showHide {
-  0%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px; opacity:1;}
-  25% {  text-shadow: #FFF 4px -1px 10px, #FFF -4px 1px 10px; }
-  50% {  text-shadow: #FFF 1px -1px 7px, #FFF -1px 1px 7px; opacity:0; }
-  75%   { text-shadow: #FFF 4px -1px 5px, #FFF -4px 1px 5px;}
-  100%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px; opacity :1;}
+  0%   { text-shadow: #ddcf93 1px -1px 3px, #ddcf93 -1px 1px 3px;}
+  25% {  text-shadow: #ddcf93 4px -1px 10px, #ddcf93 -4px 1px 10px; }
+  50% {  text-shadow: #ddcf93 1px -1px 7px, #ddcf93 -1px 1px 7px; }
+  75%   { text-shadow: #ddcf93 4px -1px 5px, #ddcf93 -4px 1px 5px;}
+  100%   { text-shadow: #ddcf93 1px -1px 3px, #ddcf93 -1px 1px 3px;}
 
 }
 
@@ -38,7 +44,7 @@
 
 #myProgress {
   width: 90%;
-  background-color: #DCCE96;
+  background-color: #ddcf93;
   padding:4px;
   margin: 10px;
   border-radius: 14px;
@@ -78,13 +84,13 @@ color: #DCCE96;
 .myBar h4{
 text-align: center;
 margin:0;
-padding-top: 5px;
+padding-top: 3px;
 font-size: 20px;
 transition: color 2s;
 }
 
 .myBar h4.complete{
-  color:#FFF;
+  color:#ddcf93;
    animation: showHide 5s linear infinite;
 }
 
