@@ -31,7 +31,6 @@ var elem2=document.getElementById(id).getElementsByClassName('status')[0];
   elem.className = "myBar first";
   elem2.innerHTML='';
   elem2.className = "status";
-  console.log((document.getElementById(id).getElementsByClassName('diamonds')[0]));
   (document.getElementById(id).getElementsByClassName('diamonds')[0]).style.display = "none";
   completeState=false;
   }
@@ -55,6 +54,7 @@ else{
   elem.className = "myBar fourth";
   elem2.innerHTML='COMPLETE!';
   elem2.className = "status complete";
+  console.log((document.getElementById(id).getElementsByClassName('diamonds')[0]));
   (document.getElementById(id).getElementsByClassName('diamonds')[0]).style.display = "initial";
 }
 }
