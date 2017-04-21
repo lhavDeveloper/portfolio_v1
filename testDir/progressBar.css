@@ -1,13 +1,6 @@
-  @-webkit-keyframes showHide {
-  0%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px;}
-  25% {  text-shadow: #FFF 4px -1px 10px, #FFF -4px 1px 10px; }
-  50% {  text-shadow: #FFF 1px -1px 7px, #FFF -1px 1px 7px; }
-  75%   { text-shadow: #FFF 4px -1px 5px, #FFF -4px 1px 5px;}
-  100%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px;}
 
-}
 
- @keyframes showHide {
+ @-webkit-keyframes showHide {
   0%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px;}
   25% {  text-shadow: #FFF 4px -1px 10px, #FFF -4px 1px 10px; }
   50% {  text-shadow: #FFF 1px -1px 7px, #FFF -1px 1px 7px; }
