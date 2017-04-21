@@ -1,0 +1,146 @@
+  @-webkit-keyframes showHide {
+  0%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px;}
+  25% {  text-shadow: #FFF 4px -1px 10px, #FFF -4px 1px 10px; }
+  50% {  text-shadow: #FFF 1px -1px 7px, #FFF -1px 1px 7px; }
+  75%   { text-shadow: #FFF 4px -1px 5px, #FFF -4px 1px 5px;}
+  100%   { text-shadow: #FFF 1px -1px 3px, #FFF -1px 1px 3px;}
+
+}
+
+  @-webkit-keyframes moveDiamond {
+  0%   { height:5px; width:5px; background-color:white;}
+  25%  { height:3px; width:3px; background-color:#D3D3D3;}
+  50%  { height:2px; width:2px; background-color:white;}
+  75%  { height:3px; width:3px; background-color:#D3D3D3;}
+  100%   { height:5px; width:5px; background-color:white;}
+
+}
+
+#myProgress {
+  width: 90%;
+  background-color: #DCCE96;
+  padding:4px;
+  margin: 10px;
+  border-radius: 14px;
+
+}
+
+.myBar{
+min-width:5%;
+height: 30px;
+transition: all 1s;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+border: solid 1px black;
+}
+
+.myBar.first{
+background-color: #ccbadc;
+color:black;
+}
+
+.myBar.second{
+background-color: #885ead;
+color:black;
+}
+
+.myBar.third{
+background-color: #8950AD;
+color: #DCCE96;
+}
+
+.myBar.fourth{
+background-color:   #290A3D;
+color: #DCCE96;
+}
+
+.myBar h4{
+text-align: center;
+margin:0;
+padding-top: 5px;
+font-size: 20px;
+transition: color 2s;
+}
+
+.myBar h4.complete{
+  color:#FFF;
+   animation: showHide 5s linear infinite;
+}
+
+
+.diamond {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+
+}
+
+.diamonds div:nth-child(1) {
+left: 5%;
+top:5%;
+animation: moveDiamond 1s linear infinite;
+}
+
+.diamonds div:nth-child(2) {
+  left: 10%;
+top:50%;
+animation: moveDiamond 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+.diamonds div:nth-child(3) {
+  left: 20%;
+top:75%;
+animation: moveDiamond 1s linear infinite;
+}
+
+.diamonds div:nth-child(4) {
+  left: 30%;
+top:5%;
+animation: moveDiamond 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+.diamonds div:nth-child(5) {
+  left: 40%;
+top:50%;
+animation: moveDiamond 1s linear infinite;
+}
+
+.diamonds div:nth-child(6) {
+  left: 50%;
+top:75%;
+animation: moveDiamond 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+.diamonds div:nth-child(7) {
+  left: 60%;
+top:5%;
+animation: moveDiamond 1s linear infinite;
+}
+
+.diamonds div:nth-child(8) {
+  left: 70%;
+top:50%;
+animation: moveDiamond 1s linear infinite;
+animation-delay: 0.5s;
+}
+
+.diamonds div:nth-child(9) {
+  left: 80%;
+top:75%;
+animation: moveDiamond 1s linear infinite;
+}
+
+.diamonds div:nth-child(10) {
+  left: 90%;
+top:5%;
+animation: moveDiamond 1s linear infinite;
+animation-delay: 0.5s;
+}
