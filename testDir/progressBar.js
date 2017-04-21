@@ -54,8 +54,7 @@ else{
   elem.className = "myBar fourth";
   elem2.innerHTML='COMPLETE!';
   elem2.className = "status complete";
-  console.log((document.getElementById(id).getElementsByClassName('diamonds')[0]));
-  (document.getElementById(id).getElementsByClassName('diamonds')[0]).style.display = "initial";
+  (document.getElementById(id).getElementsByClassName('diamonds')[0]).style.display = "block";
 }
 }
 
