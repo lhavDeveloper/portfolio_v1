@@ -1,0 +1,19 @@
+<div class="row containerBox clickable" ng-click="expandBox()">
+<div class="col-xs-12 col-md-4">
+  <img alt="company logo" class="logoImages" ng-src="{{::info.imageUrl}}"/>   
+  <span class="companyHeading visible-xs-inline visible-sm-inline">{{::info.company}}</span>      
+</div>
+<div class="col-xs-12 col-md-8 experiences" style="height: 100%">
+    <div>
+        <h3 class="companyHeading visible-md-inline visible-lg-inline">{{::info.company}}</h3>
+        <h3 class="titleHeading">{{::info.title}} <br class="visible-xs visible-sm"> ({{::info.duration}})</h3>
+        <h3 class="locationHeading">{{::info.location}}</h3>
+    </div>
+    <div>
+      <ul ng-class="showDescription"> 
+        <li ng-repeat="d in info.description">{{::d}}</li>
+      </ul>
+    </div>
+</div>
+<hr class="dividers">
+</div>

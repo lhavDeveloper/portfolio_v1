@@ -1,0 +1,516 @@
+/* RESET STYLE CSS */
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+color:#36545f;
+box-sizing: border-box;
+}
+
+hr{
+    display: block;
+    margin-top:10px;
+    margin-bottom: 10px;
+    width: 100%;
+    clear: both;
+}
+
+/* LANDING SCREEN SECTION STYLES */
+
+.row{
+ margin:0;
+}
+
+.pages{
+    position: relative;
+    min-height:100vh;
+}
+
+#homePage{
+    background-color: rgba(0,0,0,0.5);
+}
+
+#overlay{
+    position: absolute;
+    background-image: url("images/bgImage4.jpeg");
+    background-size: cover;
+    background-position: 0px 0px;
+    width: 100%;
+    height:100vh;
+    z-index: -1;
+}
+
+#homePage > h1{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+    color:#FFF;
+    padding-top: 40vh;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+#underline{
+    width:20%;
+}
+
+#homePage > h2{
+    font-family: 'Raleway', sans-serif;
+    color:#a2abb2;
+    text-align: center;
+    letter-spacing: 2px;
+    color:#DCDCDC;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#landingScreenButton{
+    border: solid 1px white;
+}
+
+.arrowButton{
+    position:absolute;
+    left:49vw;
+    height:50px;
+    width: 50px;
+    border:none;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.arrowButton.up{
+    top: 10px;
+}
+
+.arrowButton.down{
+    bottom: 10px;
+}
+
+.arrowButton.light{
+    color: white;
+}
+
+.arrowButton.dark{
+    color: gray;
+}
+
+.arrowButton > .fa{
+    font-size: 40px !important;
+    line-height: 46px !important;
+    margin: auto !important;
+}
+
+.arrowButton.light:hover{
+    background-color: #212121;
+}
+
+.arrowButton.dark:hover{
+    background-color: #dcdcdc;
+}
+
+/* PROFESSIONAL EXPERIENCE */
+
+#aboutPage >.container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.sectionHeadings{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.dividers{
+    position: absolute;
+    bottom: 0;
+}
+
+.logoImages{
+    height: 110px;
+    width: 110px;
+    padding: 10px;
+}
+
+.firstFace, .secondFace{
+    height: 100%;
+    transition: all 0.2s linear;
+}
+
+.firstFace{
+    visibility: visible;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.secondFace{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+.containerBox{
+    position: relative;
+    transition: all 0.2s linear;
+    padding:30px 0;
+}
+
+.clickable:hover{
+    left: 5px;
+    bottom: 5px;
+    box-shadow: -3px 3px 5px #dcdcdc;
+    border: solid 1px #dcdcdc;
+    cursor: pointer;
+
+}
+
+.clickable:hover > hr{
+    display: none;
+}
+
+.containerBox ul{
+    margin-top: 10px;
+    padding:0;
+    color: #707070;
+}
+
+
+.containerBox ul>li{
+    margin: 5px 0;
+}
+
+.containerBox ul::before {
+    content: 'Description';
+    margin-top:10px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Raleway';
+    color:#0092cc;
+    text-decoration: underline;
+}
+
+.companyHeading{
+    margin:0;
+    color:#2E8e57;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.titleHeading{
+    margin:0;
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Raleway';
+    color:#0092cc;
+}
+
+.locationHeading{
+    margin:10px 0;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Raleway';
+    color:#707070;
+}
+
+/* PERSONAL PROJECTS */
+
+.technologies{
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Raleway';
+    color:#0092cc;
+    border: solid 1px #0074a3;
+    padding: 0px 7px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* PERSONAL BACKGROUND SCREEN STYLES */
+
+#personalBackgroundPage{
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#overlay2{
+    position: absolute;
+    background-image: url("images/personalBg.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    width: 100%;
+    height:100vh;
+    z-index: -1;
+}
+
+#photo{
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin: 0 10px 10px 0;
+}
+
+#personalBackground {
+    width: 50vw;
+    margin:auto;
+    text-align: justify;
+    color:ghostwhite;
+}
+
+#personalBackground > h2{
+    padding-top: 25vh;
+    text-align: center;
+    font-family: 'Ubuntu';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#personalBackground > p{
+    font-family: 'Raleway';
+    line-height: 1.25;
+    font-size: 20px;
+}
+
+/* PHOTOGRAPHY SCREEN */
+
+#photographyPage > h2{
+   font-family: 'Raleway';
+   text-transform: uppercase;
+   font-size: 25px;
+   letter-spacing: 1.5px;
+   font-weight: 600;
+   text-align: center;
+   padding-top: 80px;
+}
+
+#photographyPage > h3{
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: #707070;
+    text-align: center;
+}
+
+#photographyPage .fa{
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.photos{
+    display: inline-block;
+    padding:10px 10px 10px 0;
+}
+
+#Photography{
+    margin-top: 30px;
+}
+
+.galleryPhotos:hover{
+    cursor: pointer;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: -5px 5px 5px #888888;
+    border: solid 1px #888;
+}
+
+.modalBody{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:9999;
+}
+
+.modalBody > .modalBackgound{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: #000;
+    opacity: 0.8;
+
+
+}
+
+.modalBody > .dialogBox{
+    z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*-webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);*/
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+
+.modalBody > .dialogBox >.crossButton{
+    position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+
+}
+
+.modalBody > .dialogBox > .modalContent {
+  padding:10px;
+  text-align: left;
+}
+
+.modalBody > .dialogBox > .modalContent > h1{
+font-size:25px;
+}
+
+#fullPhotograph{
+    height:auto;
+    max-width: 90vw;
+}
+
+/* CONTACT SECTION */
+
+#contactSection{
+    height:auto;
+    background-color: #212121;
+    margin-top:30px;
+    color:#999;
+    padding: 30px;
+}
+
+.socialButtons{
+    background-color: transparent;
+    float: right;
+    border: solid 2px white;
+    margin: 10px 30px 0 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.socialButtons > .fa{
+    line-height: 80px;
+    font-size: 40px !important;
+    margin-left: 30px;
+    color: white;
+}
+
+#contactDivs .fa{
+    font-size: 20px;
+}
+
+#contactDivs > .col-xs-6{
+    padding-left: 0;
+}
+
+#contactSection h2{
+    letter-spacing: 1.5px;
+    font-family: 'Raleway';
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#contactSection h4{
+    font-size: 16px;
+    font-family: 'Ubuntu';
+}
+
+#contactButton{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    float: right
+}
+
+#contactButton:hover{
+    color:white;
+}
+
+#contactIcon{
+    position: relative;
+    bottom: 2px;
+}
+
+
+
+/* -------- MEDIA QUERIES ---------*/
+
+/* For mobiles and tablets */
+
+@media (max-width: 767px) {
+    #homePage > h1{
+        font-size: 6vw;
+    }
+
+    #homePage > h2{
+        font-size: 4vw;
+    }
+
+    .logoImages{
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .companyHeading{
+        font-size: 6vw;
+    }
+
+    .titleHeading{
+        font-size: 5vw;
+    }
+
+    .locationHeading{
+        font-size: 4vw;
+    }
+
+    #personalBackground{
+        width: 80vw;
+    }
+
+    #personalBackground > h2{
+        padding-top: 30px;
+        font-size: 6vw;
+    }
+
+    #photo{
+        max-width: 80vw;
+        width: 80vw;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* styles for safari versions below 10.0 where box-sizing is not supported*/
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ @media {
+    .experience:hover{
+    border: none;
+
+}
+}}

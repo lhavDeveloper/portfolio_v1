@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dhruv Singhal</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+   
+  </head>
+  <body ng-controller="mainController" ng-cloak>
+
+  <!--/////////////////////-LANDING SCREEN SECTION-////////////////////////-->
+
+  <div id="homePage" class="pages">
+    <div id="overlay"></div>
+    <h1>Dhruv Singhal</h1>
+    <hr id="underline">
+    <h2>Software Engineer</h2>
+    <button id="landingScreenButton" class="arrowButton down light" ng-click="gotoElement('aboutPage')"><i class="fa fa-angle-double-down"></i></button>
+  </div>
+
+  <!--///////////////////-PROFESSIONAL EXPERIENCE SECTION-///////////////-->
+
+  <div id="aboutPage" class="pages">
+    <button class="arrowButton up dark" ng-click="gotoElement('homePage')"><i class="fa fa-angle-double-up"></i></button>
+    <div class="container">
+      <h3 class="sectionHeadings">PROFESSIONAL EXPERIENCE</h3>
+      <hr>
+      <!-- professional experience displayed by the html code below. View professionalExperienceTemplate.html for full code.-->
+      <div experience-box ng-repeat="e in experience" info="e"></div>
+
+  <!--///////////////-ACADEMIC EXPERIENCE SECTION-////////////////-->
+
+      <h3 class="sectionHeadings">ACADEMIC EXPERIENCE</h3>
+      <hr>
+      <!-- Academic experience displayed by the html code below. -->
+      <div class="row containerBox" ng-repeat="e in education">
+        <div class="col-xs-12 col-md-4">
+          <img alt="company logo" class="logoImages" ng-src="{{::e.imageUrl}}"/> 
+          <span class="companyHeading visible-xs-inline visible-sm-inline">{{::e.university}}</span>          
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <h3 class="companyHeading visible-md-inline visible-lg-inline" >{{::e.university}}</h3>
+          <h3 class="titleHeading">{{::e.course}}</h3>
+          <h3 class="locationHeading">{{::e.duration}}</h3>
+        </div>
+        <hr class="dividers">
+      </div>
+
+  <!--////////////////-PERSONAL PROJECTS-///////////////////-->
+
+     <h3 class="sectionHeadings">PERSONAL PROJECTS</h3>
+     <hr>
+     <div class="row containerBox clickable" ng-repeat="p in projects" ng-click="redirectToGithub($index)">
+        <div class="col-xs-12 col-md-4">
+          <img alt="company logo" class="logoImages" ng-src="{{::p.imageUrl}}"/> 
+          <span class="companyHeading visible-xs-inline visible-sm-inline">{{::p.title}}</span>          
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <h3 class="companyHeading visible-md-inline visible-lg-inline" >{{::p.title}}</h3>
+          <h3 class="locationHeading">{{::p.description}}</h3>
+          <div class="technologies">{{::p.technologies}}</div>
+        </div>
+        <hr class="dividers">
+      </div>
+
+      <button class="arrowButton down dark" ng-click="gotoElement('personalBackgroundPage')"><i class="fa fa-angle-double-down"></i></button>
+
+    </div>
+  </div>
+
+  <!--//////////////////- PERSONAL BACKGROUND SECTION -////////////////////-->
+
+  <div id="personalBackgroundPage" class="pages">
+   <div id="overlay2"></div>
+   <button class="arrowButton up light" ng-click="gotoElement('aboutPage')"><i class="fa fa-angle-double-up"></i></button>
+   <div id="personalBackground">
+    <h2>Personal Background</h2>
+    <img alt="Dhruv Singhal's photo" id="photo" ng-src="css/images/photo.jpg">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+   </div>
+   <button class="arrowButton down light" ng-click="gotoElement('photographyPage')"><i class="fa fa-angle-double-down"></i></button>
+  </div>
+
+  <!--///////////////- PHOTOGRAPHY SECTION - /////////////////////////-->
+
+  <div id="photographyPage" class="pages">
+    <button class="arrowButton up dark" ng-click="gotoElement('personalBackgroundPage')"><i class="fa fa-angle-double-up"></i></button>
+    <modal-window show-variable="showModal" height="auto" width="auto">
+      <img alt="photo" id="fullPhotograph" ng-src="{{selectedPhoto}}"/>
+    </modal-window>
+    <h2>Photography</h2>
+    <hr style="width: 20%; color:black; height: 2px;">
+    <h3><i class="fa fa-quote-left"></i>No place is boring, if you've had a good night's sleep and have a pocket full of unexposed film - Robert Adams<i class="fa fa-quote-right"></i></h3>
+    <div id="Photography" class="container" ng-repeat="p in photographs">
+        <h3 class="titleHeading">{{::p.category}}</h3>
+        <hr>
+        <div class="photos" ng-repeat="photo in p.photos"><img alt="photo" class="galleryPhotos" ng-src="{{::photo}}" ng-click="toggleModal(photo)"/></div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="contactSection">
+      <h2 class="row">Contact<button id="contactButton" ng-click="showContactInfo()"><i id="contactIcon" class="fa fa-angle-down"></i></button></h2>
+      <hr>
+      <div id="contactDivs" class="row" ng-show="contactInfo">
+        <div class="col-xs-6">
+          <h4><i class="fa fa-envelope-o"></i> <span id="email">{{emailText}}</span></h4>
+          <h4><i class="fa fa-address-card-o"></i> <span id="address">{{phoneText}}</span></h4>
+          <h4><i class="fa fa-phone"></i><span id="phone">{{addressText}}</span></h4>
+        </div>
+        <button class=" socialButtons" ng-click="redirectPage(linkedInUrl)"><i class="fa fa-linkedin"></i></button>
+        <button class=" socialButtons" ng-click="redirectPage(githubUrl)"><i class="fa fa-github"></i></button>
+      </div>
+    </div>
+
+  </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-touch.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
